@@ -12,9 +12,7 @@ exports.join = async (req, res, next) => {
 	try {
 		const exUser = await User.findOne({ where: { email } });
 		if (exUser) {
-			return res
-				.status(400)
-				.json({error: 'exist'});
+			return res.status(400).json({error: '이미 존재하는 유저'});
 		}
 		const hash = await bcrypt.hash(password, 12);
 		await User.create({

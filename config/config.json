@@ -1,9 +1,10 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
+    "username": "ugul",
+    "password": "ugul",
     "database": "myblog",
     "host": "127.0.0.1",
+    "port": "3305",
     "dialect": "mysql"
   },
   "test": {
