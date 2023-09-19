@@ -23,7 +23,6 @@ exports.uploadPost = async (req, res, next) => {
 
 exports.updatePost = async (req, res, next) => {
     const postId = req.params.id;
-
     try {
         const post = await Post.findOne({where: {id: postId}})
         if (post.UserId !== req.user.id) {
